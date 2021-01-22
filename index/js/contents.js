@@ -1,10 +1,9 @@
 class Track {
-	constructor(id, title, info, src, section) {
+	constructor(id, title, info, src) {
 		this.id = id;
 		this.title = title;
 		this.info = info;
 		this.src = src;
-		this.section = section;
 		this.dom = this.createDOM();
 	}
 	createDOM() {
@@ -22,7 +21,7 @@ class Track {
 			for (let list of this.info.children) {
 				toggle(list);
 			}
-			updateSectionsContainer(s(this.section));
+			updateSectionsContainer();
 		});
 		
 		let info = this.info;
@@ -37,7 +36,6 @@ class Track {
 		
 		addChildren(info, [player]);
 		addChildren(container, [title, info]);
-		addChildren(s(this.section), [container]);
 		
 		return container;
 	}
@@ -86,7 +84,8 @@ class Discography extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#discography-${i}`, t.titles[0],  this.createTrackInfo(t), t.links.src, this.id);
+			let track = new Track(`#discography-${i}`, t.titles[0],  this.createTrackInfo(t), t.links.src);
+			addChildren(s(this.id), [track.dom]);
 		}
 	}
 	createTrackInfo(trackData) {
@@ -108,7 +107,8 @@ class Covers extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#covers-${i}`, t.title, this.createTrackInfo(t), t.links.src, this.id);
+			let track = new Track(`#covers-${i}`, t.title, this.createTrackInfo(t), t.links.src);
+			addChildren(s(this.id), [track.dom]);
 		}
 	}
 	createTrackInfo(trackData) {
@@ -129,7 +129,8 @@ class Livestreams extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#livestreams-${i}`, t[0], this.createTrackInfo(t), t[1], this.id);
+			let track = new Track(`#livestreams-${i}`, t[0], this.createTrackInfo(t), t[1]);
+			addChildren(s(this.id), [track.dom]);
 		}
 	}
 	createTrackInfo(trackData) {
@@ -148,7 +149,8 @@ class Others extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#others-${i}`, t.title + " " + t.version, this.createTrackInfo(t), t.links.src, this.id);
+			let track = new Track(`#others-${i}`, t.title + " " + t.version, this.createTrackInfo(t), t.links.src);
+			addChildren(s(this.id), [track.dom]);
 		}
 	}
 	createTrackInfo(trackData) {

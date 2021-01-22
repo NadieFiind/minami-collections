@@ -139,9 +139,9 @@ body {
 	display: block;
 }
 #volume-bar {
-	width: 60%;
+	width: 80%;
 	background-color: var(--col1);
-	height: 5px;
+	height: 10px;
 	border-radius: 10px;
 	appearance: none;
 	overflow: hidden;

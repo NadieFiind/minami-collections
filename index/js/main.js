@@ -26,9 +26,5 @@ new Livestreams("#livestreams-sec", data.live_streams).createTracks();
 new Others("#others-sec", data.others).createTracks();
 
 // window events
-window.onload = () => {
-	updateSectionsContainer();
-};
-window.onresize = () => {
-	updateSectionsContainer();
-};
+window.addEventListener("load", updateSectionsContainer);
+window.addEventListener("resize", updateSectionsContainer);

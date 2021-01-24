@@ -260,7 +260,7 @@ switch (param) {
 	case "discography":
 		for (let t of data.discography) {
 			let title = t.titles[0];
-			let info = "Minami – " + t.album;
+			let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
 			let lyrics = t.lyrics;
 			let src = t.links.src;
 			let track = new Track(title, info, lyrics, src);

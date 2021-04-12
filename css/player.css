@@ -110,7 +110,7 @@ body {
 	height: 25px;
 	filter: invert(100%);
 	margin: 10px;
-	background-image: url(assets/switch.svg);
+	background-image: url(/img/player/switch.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	right: 0;
@@ -182,7 +182,7 @@ body {
 	box-shadow: -1000px 0 0 1000px var(--col0);
 }
 #volume {
-	background-image: url(assets/volume.svg);
+	background-image: url(/img/player/volume.svg);
 	width: 20px;
 	height: 20px;
 	background-size: cover;
@@ -207,11 +207,11 @@ body {
 	filter: invert(50%);
 }
 #shuf-btn {
-	background-image: url(assets/shuffle.svg);
+	background-image: url(/img/player/shuffle.svg);
 	transition: all 0.3s ease;
 }
 #prev-btn {
-	background-image: url(assets/previous.svg);
+	background-image: url(/img/player/previous.svg);
 	filter: invert(100%) !important;
 }
 #play-btn {
@@ -256,11 +256,11 @@ body {
 	background-color: black;
 }
 #next-btn {
-	background-image: url(assets/next.svg);
+	background-image: url(/img/player/next.svg);
 	filter: invert(100%) !important;
 }
 #rept-btn {
-	background-image: url(assets/repeat.svg);
+	background-image: url(/img/player/repeat.svg);
 	transition: all 0.3s ease;
 }
 .btn-on {

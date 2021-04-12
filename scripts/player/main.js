@@ -151,7 +151,7 @@ class Player {
 			
 			let gif = e("img");
 			gif.classList.add("playing-gif");
-			gif.src = "player/img/track_playing.gif";
+			gif.src = "/img/player/track_playing.gif";
 			gif.alt = "Now playing...";
 			track.gif = gif;
 			

@@ -12,7 +12,9 @@ function e(element) {
 
 function addChildren(parent, children) {
 	for (let child of children) {
-		parent.appendChild(child);
+		if (child) {
+			parent.appendChild(child);
+		}
 	}
 }
 

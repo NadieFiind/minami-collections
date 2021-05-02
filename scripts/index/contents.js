@@ -98,10 +98,9 @@ class Discography extends Section {
 		let album = this.createList("Album:", [trackData.album]);
 		
 		let official = trackData.links.official ? this.createLink("Original Source", trackData.links.official) : null;
-		let download = this.createLink("Download", trackData.links.src);
-		let links = this.createList("External Link(s):", null, [official, download]);
+		let links = this.createList("External Link(s):", null, [official]);
 		
-		addChildren(info, [titles, album, links]);
+		addChildren(info, [titles, album, official ? links : null]);
 		return info;
 	}
 }

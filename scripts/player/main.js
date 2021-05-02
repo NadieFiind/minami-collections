@@ -205,7 +205,8 @@ class Track {
 		
 		let switchLyricsBtn = e("button");
 		switchLyricsBtn.classList.add("btn");
-		switchLyricsBtn.style.bottom = s("#controls").offsetHeight + "px";
+		switchLyricsBtn.style.right = "10px";
+		switchLyricsBtn.style.bottom = "5px";
 		switchLyricsBtn.addEventListener("click", () => {
 			this.romajiLyrics = !this.romajiLyrics;
 			this.showLyrics();
@@ -247,9 +248,9 @@ function resizeSections() {
 	let sscH = s("#select-sec-container").offsetHeight;
 	let ctrlH = s("#controls").offsetHeight;
 	for (let section of s(".section", true)) {
-		section.style.height = window.innerHeight - sscH - ctrlH + "px";
+		section.style.height = window.innerHeight - sscH + "px";
 	}
-	s("#volume-panel").style.bottom = ctrlH + "px";
+	s("#volume-panel").style.bottom = ctrlH - 5 + "px";
 }
 
 // load tracks of the given query

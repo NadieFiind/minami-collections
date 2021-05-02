@@ -40,6 +40,7 @@ class Track {
 		return container;
 	}
 }
+
 class Section {
 	constructor(id, data) {
 		this.id = id;
@@ -80,6 +81,7 @@ class Section {
 		return link;
 	}
 }
+
 class Discography extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
@@ -103,6 +105,7 @@ class Discography extends Section {
 		return info;
 	}
 }
+
 class Covers extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
@@ -125,6 +128,7 @@ class Covers extends Section {
 		return info;
 	}
 }
+
 class Livestreams extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
@@ -145,6 +149,7 @@ class Livestreams extends Section {
 		return info;
 	}
 }
+
 class Others extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {

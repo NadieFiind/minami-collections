@@ -4,6 +4,7 @@ function updateSectionsContainer() {
 		s("#sections-container").style.height = getCurrentSection().offsetHeight + "px";
 	}, 300);
 }
+
 function getCurrentSection() {
 	switch (s("#sections-container").style.left) {
 		case "0%":

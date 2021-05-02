@@ -206,7 +206,13 @@ class Track {
 		let switchLyricsBtn = e("button");
 		switchLyricsBtn.classList.add("btn");
 		switchLyricsBtn.style.right = "10px";
-		switchLyricsBtn.style.bottom = "5px";
+		
+		if (window.matchMedia("(max-width: 576px)").matches) {
+			switchLyricsBtn.style.bottom = s("#controls").offsetHeight + 5 + "px";
+		} else {
+			switchLyricsBtn.style.bottom = "5px";
+		}
+		
 		switchLyricsBtn.addEventListener("click", () => {
 			this.romajiLyrics = !this.romajiLyrics;
 			this.showLyrics();

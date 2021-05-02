@@ -7,8 +7,11 @@ class Track {
 		this.dom = this.createDOM();
 	}
 	createDOM() {
+		let wrapper = e("div");
+		wrapper.classList.add("content", "col-12", "col-sm-6", "col-md-4", "p-0");
+		
 		let container = e("div");
-		container.classList.add("content", "col-12", "col-sm-6");
+		container.classList.add("content-container");
 		
 		let title = e("button");
 		title.textContent = this.title;
@@ -36,8 +39,9 @@ class Track {
 		
 		addChildren(info, [player]);
 		addChildren(container, [title, info]);
+		addChildren(wrapper, [container]);
 		
-		return container;
+		return wrapper;
 	}
 }
 
@@ -76,6 +80,7 @@ class Section {
 	createLink(text, href) {
 		let link = e("a");
 		link.classList.add("link");
+		link.setAttribute("target", "_blank");
 		link.textContent = text;
 		link.href = href;
 		return link;

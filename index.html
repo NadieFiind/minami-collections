@@ -33,28 +33,11 @@
 		<script src="/scripts/index/main.js" defer></script>
 	</head>
 	<body>
-		<nav>
-			<button id="menu-btn" class="btn" onclick="toggleMenu();">
-				<img src="/img/menu_button.png" alt="Menu">
-			</button>
-			<div id="menu" class="row m-0 py-5">
-				<div class="col-5">
-					<button class="btn btn-link mb" onclick="goTo(s('header')); selectSection(0, s('.ssb', true)[0]);">DISCOGRAPHY</button>
-					<button class="btn btn-link mb" onclick="goTo(s('header')); selectSection(1, s('.ssb', true)[1]);">COVERS</button>
-					<button class="btn btn-link mb" onclick="goTo(s('header')); selectSection(2, s('.ssb', true)[2]);">LIVE STREAMS</button>
-					<button class="btn btn-link mb" onclick="goTo(s('header')); selectSection(3, s('.ssb', true)[3]);">OTHERS</button>
-				</div>
-				<div class="col-5">
-					<button class="btn btn-link mb" onclick="goTo(s('header'));">TOP</button>
-					<button class="btn btn-link mb" onclick="goTo(s('footer'));">BOTTOM</button>
-				</div>
-			</div>
-		</nav>
 		<header>
-			<h1 class="m-0">
+			<h1 class="m-0 text-center">
 				<img id="logo" src="/img/logo.png" alt="美波 Minami Collections">
 			</h1>
-			<nav class="row row-cols-4 btn-group w-100 m-0">
+			<nav id="header-nav" class="row row-cols-4 btn-group m-0">
 				<button class="btn col ssb toggled" onclick="selectSection(0, this);">Discography</button>
 				<button class="btn col ssb" onclick="selectSection(1, this);">Covers</button>
 				<button class="btn col ssb" onclick="selectSection(2, this);">Live Streams</button>
@@ -66,21 +49,22 @@
 				<div class="col">
 					<div class="container">
 						<section id="discography-sec" class="row">
-							<h2 class="col-9 section-label">DISCOGRAPHY</h2>
-							<div class="col-3 player-link">
+							<div class="col-12 player-link">
 								<a class="link" href="player?s=discography">Play All</a>
 							</div>
 							<!--
-							<div class="content">
-								<button class="btn" onclick="this.open();" data-bs-toggle="collapse" data-bs-target="#example">
-									This is the title of the track.
-								</button>
-								<div id="example" class="collapse">
-									<ul class="content-info-list">
-										These elements are added by JavaScript when loading the tracks.
-										<li class="content-info-item">Example</li>
-									</ul>
-									<audio controls loop>Your browser does not support this format.</audio>
+							<div class="content col-12 col-sm-6 col-md-4 p-0">
+								<div class="content-container">
+									<button class="btn" onclick="this.open();" data-bs-toggle="collapse" data-bs-target="#example">
+										This is the title of the track.
+									</button>
+									<div id="example" class="collapse">
+										<ul class="content-info-list">
+											These elements are added by JavaScript when loading the tracks.
+											<li class="content-info-item">Example</li>
+										</ul>
+										<audio controls loop>Your browser does not support this format.</audio>
+									</div>
 								</div>
 							</div>
 							-->
@@ -90,8 +74,7 @@
 				<div class="col">
 					<div class="container">
 						<section id="covers-sec" class="row">
-							<h2 class="col-9 section-label">COVERS</h2>
-							<div class="col-3 player-link">
+							<div class="col-12 player-link">
 								<a class="link" href="player?s=covers">Play All</a>
 							</div>
 						</section>
@@ -100,8 +83,7 @@
 				<div class="col">
 					<div class="container">
 						<section id="livestreams-sec" class="row">
-							<h2 class="col-9 section-label">LIVE STREAMS</h2>
-							<div class="col-3 player-link">
+							<div class="col-12 player-link">
 								<a class="link" href="player?s=live_streams">Play All</a>
 							</div>
 						</section>
@@ -110,8 +92,7 @@
 				<div class="col">
 					<div class="container">
 						<section id="others-sec" class="row">
-							<h2 class="col-9 section-label">OTHERS</h2>
-							<div class="col-3 player-link">
+							<div class="col-12 player-link">
 								<a class="link" href="player?s=others">Play All</a>
 							</div>
 						</section>
@@ -121,7 +102,7 @@
 			<div id="mid-sec" class="container">
 				<div class="jumbotron mb-5">
 					<p class="m-0">
-						This site contains copyrighted material the use of which has not always been specifically authorized by the copyright owner.
+						This website contains copyrighted materials the use of which has not always been specifically authorized by the copyright owner.
 					</p>
 				</div>
 				<section>
@@ -129,43 +110,29 @@
 					<section>
 						<h3>Official Sources</h3>
 						<ul>
-							<li><a class="link" href="https://open.spotify.com/artist/1KXJUpTiNeMv93LrJbbm7G?si=SojQY7b7Qb6KqY6zK611ag">Minami Spotify (美波)</a></li>
-							<li><a class="link" href="https://www.youtube.com/c/美波minami373writer">Minami Official YouTube Channel (Minami)</a></li>
-							<li><a class="link" href="https://www.instagram.com/373off/">Minami Official Instagram (373off)</a></li>
-							<li><a class="link" href="https://twitter.com/373STAFF">Minami Staff Twitter (@373STAFF)</a></li>
-							<li><a class="link" href="https://twitcasting.tv/373staff">Minami TwitCasting (@373STAFF)</a></li>
-							<li><a class="link" href="https://osakana373.therestaurant.jp/">Minami Official Website (美波)</a></li>
+							<li><a class="link" target="_blank" href="https://open.spotify.com/artist/1KXJUpTiNeMv93LrJbbm7G?si=SojQY7b7Qb6KqY6zK611ag">Minami Spotify (美波)</a></li>
+							<li><a class="link" target="_blank" href="https://www.youtube.com/c/美波minami373writer">Minami Official YouTube Channel (Minami)</a></li>
+							<li><a class="link" target="_blank" href="https://www.instagram.com/373off/">Minami Official Instagram (373off)</a></li>
+							<li><a class="link" target="_blank" href="https://twitter.com/373STAFF">Minami Staff Twitter (@373STAFF)</a></li>
+							<li><a class="link" target="_blank" href="https://twitcasting.tv/373staff">Minami TwitCasting (@373STAFF)</a></li>
+							<li><a class="link" target="_blank" href="https://osakana373.therestaurant.jp/">Minami Official Website (美波)</a></li>
 						</ul>
 						<h3>Other Sources</h3>
 						<ul>
-							<li><a class="link" href="https://en.m.wikipedia.org/wiki/Minami_(singer)">Minami Wikipedia</a></li>
-							<li><a class="link" href="https://discord.com/invite/XPTxYcD">Discord Server (美波 Minami Fan Zone)</a></li>
-							<li><a class="link" href="https://www.reddit.com/r/minami">Reddit (r/Minami)</a></li>
-							<li><a class="link" href="https://minami.fun/">美波 (Minami) Fan Zone</a></li>
+							<li><a class="link" target="_blank" href="https://en.m.wikipedia.org/wiki/Minami_(singer)">Minami Wikipedia</a></li>
+							<li><a class="link" target="_blank" href="https://discord.com/invite/XPTxYcD">Discord Server (美波 Minami Fan Zone)</a></li>
+							<li><a class="link" target="_blank" href="https://www.reddit.com/r/minami">Reddit (r/Minami)</a></li>
+							<li><a class="link" target="_blank" href="https://minami.fun/">美波 (Minami) Fan Zone</a></li>
 						</ul>
 					</section>
 				</section>
 			</div>
 		</main>
 		<footer>
-			<div class="row row-cols-2 m-0">
-				<section class="col">
-					<h4>MENU</h4>
-					<button class="btn footer-btn" onclick="goTo(s('header'));">Top</button>
-					<button class="btn footer-btn" onclick="goTo(s('header')); selectSection(0, s('.ssb', true)[0]);">Discography</button>
-					<button class="btn footer-btn" onclick="goTo(s('header')); selectSection(1, s('.ssb', true)[1]);">Covers</button>
-					<button class="btn footer-btn" onclick="goTo(s('header')); selectSection(2, s('.ssb', true)[2]);">Live Streams</button>
-					<button class="btn footer-btn" onclick="goTo(s('header')); selectSection(3, s('.ssb', true)[3]);">Others</button>
-				</section>
-				<section class="col">
-					<h4>ABOUT</h4>
-					<p>
-						A collection of Minami (a Japanese artist) songs, covers, live streams, and others.
-						<br><br>
-						<a href="https://github.com/NadieFiind/minami-collections">GitHub</a>
-					</p>
-				</section>
-			</div>
+			This website is created by a fan,
+			only to share and promote Minami's songs and has no intention of stealing and/or claiming the ownership of her songs.
+			<br>All rights belong to the owner.<br>
+			<a href="https://github.com/NadieFiind/minami-collections">GitHub</a>
 		</footer>
 	</body>
 </html>

@@ -297,3 +297,16 @@ div::-webkit-scrollbar-thumb:hover {
 .btn-on {
 	filter: invert(100%);
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	#controls {
+		opacity: 1;
+		width: 100%;
+		left: 0;
+	}
+	#volume-bar {
+		width: 80%;
+	}
+}

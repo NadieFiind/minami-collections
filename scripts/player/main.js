@@ -247,9 +247,15 @@ function selectSection(button, section) {
 function resizeSections() {
 	let sscH = s("#select-sec-container").offsetHeight;
 	let ctrlH = s("#controls").offsetHeight;
+	
 	for (let section of s(".section", true)) {
-		section.style.height = window.innerHeight - sscH + "px";
+		if (window.matchMedia("(max-width: 576px").matches) {
+			section.style.height = window.innerHeight - sscH - ctrlH + "px";
+		} else {
+			section.style.height = window.innerHeight - sscH + "px";
+		}
 	}
+	
 	s("#volume-panel").style.bottom = ctrlH - 5 + "px";
 }
 

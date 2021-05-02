@@ -266,3 +266,17 @@ body {
 .btn-on {
 	filter: invert(100%);
 }
+
+/* Scrollbar */
+div::-webkit-scrollbar {
+  width: 1px;
+}
+div::-webkit-scrollbar-track {
+  background: var(--col4);
+}
+div::-webkit-scrollbar-thumb {
+  background: #888;
+}
+div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -827,6 +827,27 @@ let data = {
 			}
 		},
 		{
+			"titles": ["F and B", "FとB"],
+			"album": "Intent",
+			"links": {
+				"src": "tracks/discography/F and B.flac"
+			}
+		},
+		{
+			"titles": ["Haru", "ハル"],
+			"album": "Intent",
+			"links": {
+				"src": "tracks/discography/Haru.flac"
+			}
+		},
+		{
+			"titles": ["Very Very Strawberry"],
+			"album": "Intent",
+			"links": {
+				"src": "tracks/discography/Very Very Strawberry.mp3"
+			}
+		},
+		{
 			"titles": ["ETERNAL BLUE"],
 			"album": "Unknown",
 			"links": {
@@ -1143,13 +1164,6 @@ let data = {
 			"links": {
 				"src": "tracks/discography/Yukimi Daifuku no Uta.mp3"
 			}
-		},
-		{
-			"titles": ["Very Very Strawberry"],
-			"album": "Unknown",
-			"links": {
-				"src": "tracks/discography/Very Very Strawberry.mp3"
-			}
 		}
 	],
 	"covers": [
@@ -1401,6 +1415,20 @@ let data = {
 			"version": "(acoustic guitar)",
 			"links": {
 				"src": "tracks/others/Waiting for Rain (acoustic guitar).mp3"
+			}
+		},
+		{
+			"title": "Prologue",
+			"version": "(flac)",
+			"links": {
+				"src": "tracks/others/Prologue (flac).flac"
+			}
+		},
+		{
+			"title": "main actor",
+			"version": "(flac)",
+			"links": {
+				"src": "tracks/others/main actor (flac).flac"
 			}
 		}
 	]

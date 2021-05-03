@@ -120,15 +120,8 @@ class Covers extends Section {
 	}
 	createTrackInfo(trackData) {
 		let info = e("div");
-		
-		let title = this.createList("Title:", [trackData.title]);
-		
 		let artist = this.createList("Artist:", [trackData.artist]);
-		
-		let download = this.createLink("Download", trackData.links.src);
-		let links = this.createList("External Link(s):", null, [download]);
-		
-		addChildren(info, [title, artist, links]);
+		addChildren(info, [artist]);
 		return info;
 	}
 }
@@ -168,10 +161,9 @@ class Others extends Section {
 		let title = this.createList("Title:", [trackData.title]);
 		
 		let source = trackData.links.source ? this.createLink("Original Source", trackData.links.source) : null;
-		let download = this.createLink("Download", trackData.links.src);
-		let links = this.createList("External Link(s):", null, [source, download]);
+		let links = this.createList("External Link(s):", null, [source]);
 		
-		addChildren(info, [title, links]);
+		addChildren(info, [title, source ? links : null]);
 		return info;
 	}
 }

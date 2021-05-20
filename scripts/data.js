@@ -1351,17 +1351,66 @@ let data = {
 		}
 	],
 	"live_streams": [
-		["2018-12-28", "https://drive.google.com/file/d/1CPqDIBClaXat1jkNFHerQXpEmW9XoocE/view?usp=drivesdk"],
-		["2019-02-16", "https://drive.google.com/file/d/1CTmQCMdENoz0DGhHFgzqamZ2O9rvWgA8/view?usp=drivesdk"],
-		["2019-04-12", "https://drive.google.com/file/d/1CYjMcpl_M6uIftAsgfKnKc5YSOlqPtbt/view?usp=drivesdk"],
-		["2019-04-17", "https://drive.google.com/file/d/1BxwKK6h0UtMB___NyGfpFp424JFZwzaP/view?usp=drivesdk"],
-		["2019-05-31", "https://drive.google.com/file/d/1C5MSoPGs7BdgddX17Cp4-MUeguTKukxa/view?usp=drivesdk"],
-		["2019-06-11", "https://drive.google.com/file/d/1C_x7rZGe03mt3mCFSvfSYkz5ydjYRKWR/view?usp=drivesdk"],
-		["2019-08-24", "https://drive.google.com/file/d/1CPSt4EZlW_kJu6BWnGHAmcxMQjFhixii/view?usp=drivesdk"],
-		["2019-09-21", "https://drive.google.com/file/d/1Bler4aBoN_YQY1Op9hLRqzJEgZU28mJT/view?usp=drivesdk"],
-		["2020-03-28", "https://drive.google.com/file/d/1C3A_TZMr8hO9LFe5jbr3fpnfd3zArZdq/view?usp=drivesdk"],
-		["2020-06-28", "https://drive.google.com/file/d/1CAqveHLmzpHQEbsS3fMh7_eAw0pCKVf9/view?usp=drivesdk"],
-		["2020-09-26", "https://drive.google.com/file/d/1Ccmpx4b1E8l-B70W8Eak8-STUmfN5E_e/view?usp=drivesdk"]
+		{
+			"title": "2018-12-28",
+			"date": "2018-12-28",
+			"src": "https://drive.google.com/file/d/1CPqDIBClaXat1jkNFHerQXpEmW9XoocE/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-02-16",
+			"date": "2019-02-16",
+			"src": "https://drive.google.com/file/d/1CTmQCMdENoz0DGhHFgzqamZ2O9rvWgA8/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-04-12",
+			"date": "2019-04-12",
+			"src": "https://drive.google.com/file/d/1CYjMcpl_M6uIftAsgfKnKc5YSOlqPtbt/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-04-17",
+			"date": "2019-04-17",
+			"src": "https://drive.google.com/file/d/1BxwKK6h0UtMB___NyGfpFp424JFZwzaP/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-05-31",
+			"date": "2019-05-31",
+			"src": "https://drive.google.com/file/d/1C5MSoPGs7BdgddX17Cp4-MUeguTKukxa/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-06-11",
+			"date": "2019-06-11",
+			"src": "https://drive.google.com/file/d/1C_x7rZGe03mt3mCFSvfSYkz5ydjYRKWR/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-08-24",
+			"date": "2019-08-24",
+			"src": "https://drive.google.com/file/d/1CPSt4EZlW_kJu6BWnGHAmcxMQjFhixii/view?usp=drivesdk"
+		},
+		{
+			"title": "2019-09-21",
+			"date": "2019-09-21",
+			"src": "https://drive.google.com/file/d/1Bler4aBoN_YQY1Op9hLRqzJEgZU28mJT/view?usp=drivesdk"
+		},
+		{
+			"title": "2020-03-28",
+			"date": "2020-03-28",
+			"src": "https://drive.google.com/file/d/1C3A_TZMr8hO9LFe5jbr3fpnfd3zArZdq/view?usp=drivesdk"
+		},
+		{
+			"title": "2020-06-28",
+			"date": "2020-06-28",
+			"src": "https://drive.google.com/file/d/1CAqveHLmzpHQEbsS3fMh7_eAw0pCKVf9/view?usp=drivesdk"
+		},
+		{
+			"title": "2020-09-26",
+			"date": "2020-09-26",
+			"src": "https://drive.google.com/file/d/1Ccmpx4b1E8l-B70W8Eak8-STUmfN5E_e/view?usp=drivesdk"
+		},
+		{
+			"title": "YouTube Live「RED LINE」",
+			"date": "2021-05-19",
+			"src": "https://drive.google.com/file/d/1JXrZRpLfeWU_rbndqRU9yY-BY7NeQ2kR/view?usp=sharing"
+		},
 	],
 	"others": [
 		{
@@ -1429,6 +1478,13 @@ let data = {
 			"version": "(flac)",
 			"links": {
 				"src": "tracks/others/main actor (flac).flac"
+			}
+		},
+		{
+			"title": "I Love You",
+			"version": "(wav)",
+			"links": {
+				"src": "tracks/others/I Love You.wav"
 			}
 		}
 	]

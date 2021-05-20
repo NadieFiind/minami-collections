@@ -130,16 +130,16 @@ class Livestreams extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#livestreams-${i}`, t[0], this.createTrackInfo(t), t[1]);
+			let track = new Track(`#livestreams-${i}`, t["title"], this.createTrackInfo(t), t["src"]);
 			addChildren(s(this.id), [track.dom]);
 		}
 	}
 	createTrackInfo(trackData) {
 		let info = e("div");
 		
-		let date = this.createList("Date:", [new Date(trackData[0]).toString().slice(0, 15)]);
+		let date = this.createList("Date:", [new Date(trackData["date"]).toString().slice(0, 15)]);
 		
-		let download = this.createLink("Drive Link", trackData[1]);
+		let download = this.createLink("Drive Link", trackData["src"]);
 		let links = this.createList("External Link(s):", null, [download]);
 		
 		addChildren(info, [date, links]);

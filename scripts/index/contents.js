@@ -78,12 +78,16 @@ class Section {
 		return list;
 	}
 	createLink(text, href) {
-		let link = e("a");
-		link.classList.add("link");
-		link.setAttribute("target", "_blank");
-		link.textContent = text;
-		link.href = href;
-		return link;
+		if (href != null) {
+			let link = e("a");
+			link.classList.add("link");
+			link.setAttribute("target", "_blank");
+			link.textContent = text;
+			link.href = href;
+			return link;
+		}
+		
+		return null;
 	}
 }
 
@@ -102,7 +106,7 @@ class Discography extends Section {
 		
 		let album = this.createList("Album:", [trackData.album]);
 		
-		let official = trackData.links.official ? this.createLink("Original Source", trackData.links.official) : null;
+		let official = trackData.links.official ? this.createLink("Official Source", trackData.links.official) : null;
 		let links = this.createList("External Link(s):", null, [official]);
 		
 		addChildren(info, [titles, album, official ? links : null]);
@@ -130,7 +134,7 @@ class Livestreams extends Section {
 	createTracks() {
 		for (let i = 0; i < this.data.length; i++) {
 			let t = this.data[i];
-			let track = new Track(`#livestreams-${i}`, t["title"], this.createTrackInfo(t), t["src"]);
+			let track = new Track(`#livestreams-${i}`, t["title"], this.createTrackInfo(t), t["links"]["src"]);
 			addChildren(s(this.id), [track.dom]);
 		}
 	}
@@ -139,8 +143,9 @@ class Livestreams extends Section {
 		
 		let date = this.createList("Date:", [new Date(trackData["date"]).toString().slice(0, 15)]);
 		
-		let download = this.createLink("Drive Link", trackData["src"]);
-		let links = this.createList("External Link(s):", null, [download]);
+		let download = this.createLink("Drive Link", trackData["links"]["src"]);
+		let image = this.createLink("Image", trackData["links"]["img"]);
+		let links = this.createList("External Link(s):", null, [download, image ? image : null]);
 		
 		addChildren(info, [date, links]);
 		return info;
@@ -160,7 +165,7 @@ class Others extends Section {
 		
 		let title = this.createList("Title:", [trackData.title]);
 		
-		let source = trackData.links.source ? this.createLink("Original Source", trackData.links.source) : null;
+		let source = trackData.links.source ? this.createLink("Official Source", trackData.links.source) : null;
 		let links = this.createList("External Link(s):", null, [source]);
 		
 		addChildren(info, [title, source ? links : null]);

@@ -1141,14 +1141,14 @@ let data = {
 			"titles": ["Drop", "滴"],
 			"album": "Unknown",
 			"links": {
-				"src": "https://drive.google.com/uc?export=download&id=1362-GaAJEGHMHnXKt50jAS9SCcPeTmHb"
+				"src": "https://drive.google.com/uc?export=download&id=1fjACs735_DKt4eyL_7_XgGmSC-O1t-5C"
 			}
 		},
 		{
 			"titles": ["Freiheit", "フライハイト"],
 			"album": "Unknown",
 			"links": {
-				"src": "https://drive.google.com/uc?export=download&id=1c8ABRtz2jbAZVlSsjML6OhRsFC6A5_KQ"
+				"src": "https://drive.google.com/uc?export=download&id=1IL7UXFmMhFwKTC1Rg173C0ErxXXxnNYq"
 			}
 		},
 		{
@@ -1510,6 +1510,55 @@ let data = {
 			"version": "(wav)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=1NnKd4mUp54EDTNtSHlfdJTQbtpdxGkSD"
+			}
+		},
+		{
+			"title": "Drop",
+			"version": "(acoustic guitar)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=1362-GaAJEGHMHnXKt50jAS9SCcPeTmHb"
+			}
+		},
+		{
+			"title": "Freiheit",
+			"version": "(acoustic guitar)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=1c8ABRtz2jbAZVlSsjML6OhRsFC6A5_KQ"
+			}
+		},
+		{
+			"title": "Crying for Rain",
+			"version": "(RED LINE YouTube Live)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=1oCcMKMZ1A7AW0ML4IeYI5BXnPfQDklfb"
+			}
+		},
+		{
+			"title": "main actor",
+			"version": "(RED LINE YouTube Live)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=15qgaGhCjmAvaMgoaPEHqojMnuwpozqaJ"
+			}
+		},
+		{
+			"title": "Waiting for Rain",
+			"version": "(RED LINE YouTube Live)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=1SSDgGeH-ntLng8NiG-wbKMSTST06LCe_"
+			}
+		},
+		{
+			"title": "Prologue",
+			"version": "(RED LINE YouTube Live)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=1Ij23zqvMUXIV6vceCGX-6Dt-gj9W3nqV"
+			}
+		},
+		{
+			"title": "",
+			"version": "新曲 (RED LINE YouTube Live)",
+			"links": {
+				"src": "https://drive.google.com/uc?export=download&id=12zUoz15zzeq03PQFx2y1SO9qScSOX7ot"
 			}
 		}
 	]

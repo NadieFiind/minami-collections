@@ -5,7 +5,7 @@ let data = {
 			"album": "Ame wo Matsu",
 			"links": {
 				"official": "https://youtu.be/766qmHTc2ro",
-				"src": "tracks/discography/Waiting for Rain.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1TzdC5vhlDUwBJB5vnUsk68h1a7hPPGQX"
 			},
 			"lyrics": {
 				"romaji": `Kakokei film ni sugatta bokura wa<br>
@@ -122,7 +122,7 @@ let data = {
 			"album": "Kawaki wo Ameku",
 			"links": {
 				"official": "https://youtu.be/0YF8vecQWYs",
-				"src": "tracks/discography/Crying for Rain.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1qGTog08LVNVXeMaR3wtJdjahsX_d6UsL"
 			},
 			"lyrics": {
 				"romaji": `Mijuku<br>
@@ -213,7 +213,7 @@ let data = {
 			"album": "Kawaki wo Ameku",
 			"links": {
 				"official": "https://youtu.be/GQ3V50XoLOM",
-				"src": "tracks/discography/Lilac.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=17xaIq_HDndVB4tO4ZTBYrUG0wG9iIkDY"
 			},
 			"lyrics": {
 				"romaji": `Itsuka no koe ga ima boku no kokoro wo kyuukutsu ni shite iku<br>
@@ -309,7 +309,7 @@ let data = {
 			"album": "Kawaki wo Ameku",
 			"links": {
 				"official": "https://youtu.be/HIRiduzNLzQ",
-				"src": "tracks/discography/Hollowness.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1OTGqvOM80DKhyoGc2duKJicUFPuPAVlm"
 			},
 			"lyrics": {
 				"romaji": `Kimi wa iu "mou raku ni nareru yo" to<br>
@@ -424,7 +424,7 @@ let data = {
 			"album": "Kawaki wo Ameku",
 			"links": {
 				"official": "https://youtu.be/jb4ybTQwcdw",
-				"src": "tracks/discography/main actor.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=14GKwByt-vk-AwlWZ8vzV-KgexnZVJ65m"
 			},
 			"lyrics": {
 				"romaji": `Manga no shujinkō no aitsu wa itta<br>
@@ -513,7 +513,7 @@ let data = {
 			"album": "Kawaki wo Ameku",
 			"links": {
 				"official": "https://youtu.be/DkAyAvKMFP4",
-				"src": "tracks/discography/Prologue.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1z7o60a7w-3Df-vsA8hzHW3ueE33tprol"
 			},
 			"lyrics": {
 				"romaji": `Ikiru koto mo nareta aruku koto mo akita<br>
@@ -610,7 +610,7 @@ let data = {
 			"titles": ["Honest Diary", "Shoujiki Nikki", "正直日記"],
 			"album": "Emotional Water",
 			"links": {
-				"src": "tracks/discography/Honest Diary.mp3",
+				"src": "https://drive.google.com/uc?export=download&id=1A0eIknPrUoF-D5yo2Cg6g4FOQDk4vPuZ",
 				"official": "https://youtu.be/ul_8IESYCec"
 			},
 			"lyrics": {
@@ -689,7 +689,7 @@ let data = {
 			"titles": ["Sensei, Ano ne", "先生、あのね"],
 			"album": "Emotional Water",
 			"links": {
-				"src": "tracks/discography/Sensei, Ano ne.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1OUVNX15wZPwWND3RgHlLY3y5u-u9Gu0t"
 			},
 			"lyrics": {
 				"romaji": `Hitotsu futatsu fuete yuku<br>
@@ -752,7 +752,7 @@ let data = {
 			"titles": ["Water Reflection", "Suichuu Reflection", "水中リフレクション"],
 			"album": "Emotional Water",
 			"links": {
-				"src": "tracks/discography/Water Reflection.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1mHYL6l1SYKh5zZzzmw2jADc6ZdicELeR"
 			},
 			"lyrics": {
 				"romaji": `Tooku fukaku shizundeyuku<br>
@@ -823,35 +823,35 @@ let data = {
 			"titles": ["The Sea, The Summer, and You", "Umi to Natsu to Kimi to", "海と夏と君と"],
 			"album": "Emotional Water",
 			"links": {
-				"src": "tracks/discography/The Sea, The Summer, and You.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1B4_3X6Wt069rmeosdJwGF7br3xkOrjHu"
 			}
 		},
 		{
 			"titles": ["F and B", "FとB"],
 			"album": "Intent",
 			"links": {
-				"src": "tracks/discography/F and B.flac"
+				"src": "https://drive.google.com/uc?export=download&id=12FVL4nBLkitt8NUiZncU2L5h3nq40YFf"
 			}
 		},
 		{
 			"titles": ["Haru", "ハル"],
 			"album": "Intent",
 			"links": {
-				"src": "tracks/discography/Haru.flac"
+				"src": "https://drive.google.com/uc?export=download&id=17LxHowfrQkauZDxJHkI7xf-ZGl7mqi2T"
 			}
 		},
 		{
 			"titles": ["Very Very Strawberry"],
 			"album": "Intent",
 			"links": {
-				"src": "tracks/discography/Very Very Strawberry.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1bEPNNB64Xv2C8r4NcVBxo9fQM3uaSbx1"
 			}
 		},
 		{
 			"titles": ["ETERNAL BLUE"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/ETERNAL BLUE.mp3",
+				"src": "https://drive.google.com/uc?export=download&id=1E6rFQj8MY07GBBYJkRksYthfSFDiCIzV",
 				"official": "https://youtu.be/tCGIR45p-pA"
 			},
 			"lyrics": {
@@ -1043,7 +1043,7 @@ let data = {
 			"titles": ["Monologue"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Monologue.mp3",
+				"src": "https://drive.google.com/uc?export=download&id=1AAhz6e6O1TpBgGTj4ye18Nh850DK01p3",
 				"official": "https://youtu.be/IM1PBRIS5KE"
 			},
 			"lyrics": {
@@ -1127,42 +1127,42 @@ let data = {
 			"titles": ["Astor", "アスター"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Astor.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1aeGEN7AXjPS8fVrTWuihZTn97S3LqCmF"
 			}
 		},
 		{
 			"titles": ["Henna", "ヘナ"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Henna.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1T-hYJ-A5LfaoSBY8aA-Nju_E7wsXVyO4"
 			}
 		},
 		{
 			"titles": ["Drop", "滴"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Drop.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1362-GaAJEGHMHnXKt50jAS9SCcPeTmHb"
 			}
 		},
 		{
 			"titles": ["Freiheit", "フライハイト"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Freiheit.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1c8ABRtz2jbAZVlSsjML6OhRsFC6A5_KQ"
 			}
 		},
 		{
 			"titles": ["Professional Girl", "Ryuunen Shoujo", "留年少女"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Professional Girl.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1LT8TjFAh1yB9UsnNhGEnsk1gfV2wF9tm"
 			}
 		},
 		{
 			"titles": ["Yukimi Daifuku no Uta", "雪見だいふくのうた"],
 			"album": "Unknown",
 			"links": {
-				"src": "tracks/discography/Yukimi Daifuku no Uta.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1N5As8SiapRU3m0Bh662K-nziFl5nERqr"
 			}
 		}
 	],
@@ -1171,182 +1171,182 @@ let data = {
 			"title": "Choucho Musubi",
 			"artist": "Aimer",
 			"links": {
-				"src": "tracks/covers/Aimer – Choucho Musubi.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1dclXeYrp3HwF2PgDZUPb0OvCKWsoGL1P"
 			}
 		},
 		{
 			"title": "Kataomoi",
 			"artist": "Aimer",
 			"links": {
-				"src": "tracks/covers/Aimer – Kataomoi.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=18OSSx43XyPOKW0EXjHZwQUYITDYW8Bs6"
 			}
 		},
 		{
 			"title": "Charles",
 			"artist": "Balloon",
 			"links": {
-				"src": "tracks/covers/Balloon – Charles.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1GjJxN2fVpsFwhwUIpMcCBxA5x7PHN1zh"
 			}
 		},
 		{
 			"title": "The A Team",
 			"artist": "Ed Sheeran",
 			"links": {
-				"src": "tracks/covers/Ed Sheeran – The A Team.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=192gt1VvXEsCcM-cnP2Vp6uvHl99ORnhx"
 			}
 		},
 		{
 			"title": "Namae no Nai Kaibutsu",
 			"artist": "EGOIST",
 			"links": {
-				"src": "tracks/covers/EGOIST – Namae no Nai Kaibutsu.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1cLOU4ET84-xYqpl9zQv9BwxQ4MvCwiUc"
 			}
 		},
 		{
 			"title": "Departures",
 			"artist": "EGOIST",
 			"links": {
-				"src": "tracks/covers/EGOIST – Departures.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1JUl1d3_j4V1KGYuKfkXsCfKTZ7wRzVIH"
 			}
 		},
 		{
 			"title": "Renai Circulation",
 			"artist": "Kana Hanazawa",
 			"links": {
-				"src": "tracks/covers/Kana Hanazawa – Renai Circulation.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1i1iUAtuX9boO2HLiwb08Rq7q-FXpBcCZ"
 			}
 		},
 		{
 			"title": "Lemon",
 			"artist": "Kenshi Yonezu",
 			"links": {
-				"src": "tracks/covers/Kenshi Yonezu – Lemon.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1jLBiwZ6PBWGxHchL_RnV9Ehe4GeVsm6p"
 			}
 		},
 		{
 			"title": "Loser",
 			"artist": "Kenshi Yonezu",
 			"links": {
-				"src": "tracks/covers/Kenshi Yonezu – Loser.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1RqBtvdVOsQ0XVd1ixvt3D9pFjICQcFOt"
 			}
 		},
 		{
 			"title": "Peace Sign",
 			"artist": "Kenshi Yonezu",
 			"links": {
-				"src": "tracks/covers/Kenshi Yonezu – Peace Sign.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1V-ihL16ey7drX5ymnvj9Tl9aUpGtoHYk"
 			}
 		},
 		{
 			"title": "Suna no Wakusei",
 			"artist": "Kenshi Yozenu",
 			"links": {
-				"src": "tracks/covers/Kenshi Yozenu – Suna no Wakusei.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1MxNMaK72uyB3mpcklmYl1LDWt81AYPp2"
 			}
 		},
 		{
 			"title": "Tabako",
 			"artist": "koresawa",
 			"links": {
-				"src": "tracks/covers/koresawa – Tabako.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1GTBv7zaSEJuev4D3n1VPq_b7I8gvfuAE"
 			}
 		},
 		{
 			"title": "unravel",
 			"artist": "Ling Tosite Sigure",
 			"links": {
-				"src": "tracks/covers/Ling Tosite Sigure – unravel.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1awSgaUj4kX6-cwjB9LqZrNjyZPR4HOA5"
 			}
 		},
 		{
 			"title": "Gurenge",
 			"artist": "LiSa",
 			"links": {
-				"src": "tracks/covers/LiSa – Gurenge.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1-LdMozVvBGfVWPBe92-vCoG1mhCnwQLs"
 			}
 		},
 		{
 			"title": "Kokoronashi",
 			"artist": "papiyon",
 			"links": {
-				"src": "tracks/covers/papiyon – Kokoronashi.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1hd5QzlSz93Lm6ebveg6G95BfLeUVdKuJ"
 			}
 		},
 		{
 			"title": "My Hair is Bad",
 			"artist": "Makka",
 			"links": {
-				"src": "tracks/covers/Makka – My Hair is Bad.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=17hcudsdcnzhfP8IfP-5kfFTKLN7hFOtf"
 			}
 		},
 		{
 			"title": "Welcome to Japari Park",
 			"artist": "Masayoshi Oishi",
 			"links": {
-				"src": "tracks/covers/Masayoshi Oishi – Welcome to Japari Park.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=10W5Ls6rgGae7vr33iDPXMVRJ2mfc9-0k"
 			}
 		},
 		{
 			"title": "Boku to Kimi no Lullaby",
 			"artist": "Miyuna",
 			"links": {
-				"src": "tracks/covers/Miyuna – Boku to Kimi no Lullaby.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=14BzbdN1WzK-ulGtXT6mmel8mfb48hjoC"
 			}
 		},
 		{
 			"title": "Yoake to Hotaru",
 			"artist": "n-buna",
 			"links": {
-				"src": "tracks/covers/n-buna – Yoake to Hotaru.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=11ol2hjl3Sqb0417TDg2hDBp56uw22Eow"
 			}
 		},
 		{
 			"title": "Nandemonaiya",
 			"artist": "RADWIMPS",
 			"links": {
-				"src": "tracks/covers/RADWIMPS – Nandemonaiya.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1PUghcIgXviEMET2_a9JFXMgtG1FXzfQa"
 			}
 		},
 		{
 			"title": "Marunouchi Sadistic",
 			"artist": "Ringo Sheena",
 			"links": {
-				"src": "tracks/covers/Ringo Sheena – Marunouchi Sadistic.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1R2fsei5G1_baNOkv0tWqOlEBbacM_TnA"
 			}
 		},
 		{
 			"title": "Kyouran Hey Kids!!",
 			"artist": "The Oral Cigarettes",
 			"links": {
-				"src": "tracks/covers/The Oral Cigarettes – Kyouran Hey Kids!!.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1f5KN9iiRTRx-e7rKshm4DkMJO4zCK7KZ"
 			}
 		},
 		{
 			"title": "Sugar Song to Bitter Step",
 			"artist": "UNISON SQUARE GARDEN",
 			"links": {
-				"src": "tracks/covers/UNISON SQUARE GARDEN – Sugar Song to Bitter Step.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1SyS9Kiop7xe_RYQv5GUxGcrzFpm3HH66"
 			}
 		},
 		{
 			"title": "Happy Birthday To You You",
 			"artist": "YUI",
 			"links": {
-				"src": "tracks/covers/YUI – Happy Birthday To You You.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=16N-AtcMK30S-xjKVzXUbZ1dxw43jjyto"
 			}
 		},
 		{
 			"title": "I Love You",
 			"artist": "Yutaka Ozaki",
 			"links": {
-				"src": "tracks/covers/Yutaka Ozaki – I Love You.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1PbfBhzFEE2WtvsD-PEoe-Oo66s2tJYaW"
 			}
 		},
 		{
 			"title": "secret base ~Kimi ga Kureta Mono~",
 			"artist": "ZONE",
 			"links": {
-				"src": "tracks/covers/ZONE – secret base ~Kimi ga Kureta Mono~.mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1nDdf1dOFxpRCsw8rEZobloIUsfoJKCrT"
 			}
 		}
 	],
@@ -1355,85 +1355,85 @@ let data = {
 			"title": "2018-12-28",
 			"date": "2018-12-28",
 			"links": {
-				"src": "https://drive.google.com/file/d/1CPqDIBClaXat1jkNFHerQXpEmW9XoocE/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1CPqDIBClaXat1jkNFHerQXpEmW9XoocE"
 			}
 		},
 		{
 			"title": "2019-02-16",
 			"date": "2019-02-16",
 			"links": {
-				"src": "https://drive.google.com/file/d/1CTmQCMdENoz0DGhHFgzqamZ2O9rvWgA8/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1CTmQCMdENoz0DGhHFgzqamZ2O9rvWgA8"
 			}
 		},
 		{
 			"title": "2019-04-12",
 			"date": "2019-04-12",
 			"links": {
-				"src": "https://drive.google.com/file/d/1CYjMcpl_M6uIftAsgfKnKc5YSOlqPtbt/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1CYjMcpl_M6uIftAsgfKnKc5YSOlqPtbt"
 			}
 		},
 		{
 			"title": "2019-04-17",
 			"date": "2019-04-17",
 			"links": {
-				"src": "https://drive.google.com/file/d/1BxwKK6h0UtMB___NyGfpFp424JFZwzaP/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1BxwKK6h0UtMB___NyGfpFp424JFZwzaP"
 			}
 		},
 		{
 			"title": "2019-05-31",
 			"date": "2019-05-31",
 			"links": {
-				"src": "https://drive.google.com/file/d/1C5MSoPGs7BdgddX17Cp4-MUeguTKukxa/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1C5MSoPGs7BdgddX17Cp4-MUeguTKukxa"
 			}
 		},
 		{
 			"title": "2019-06-11",
 			"date": "2019-06-11",
 			"links": {
-				"src": "https://drive.google.com/file/d/1C_x7rZGe03mt3mCFSvfSYkz5ydjYRKWR/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1C_x7rZGe03mt3mCFSvfSYkz5ydjYRKWR"
 			}
 		},
 		{
 			"title": "2019-08-24",
 			"date": "2019-08-24",
 			"links": {
-				"src": "https://drive.google.com/file/d/1CPSt4EZlW_kJu6BWnGHAmcxMQjFhixii/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1CPSt4EZlW_kJu6BWnGHAmcxMQjFhixii"
 			}
 		},
 		{
 			"title": "2019-09-21",
 			"date": "2019-09-21",
 			"links": {
-				"src": "https://drive.google.com/file/d/1Bler4aBoN_YQY1Op9hLRqzJEgZU28mJT/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1Bler4aBoN_YQY1Op9hLRqzJEgZU28mJT"
 			}
 		},
 		{
 			"title": "2020-03-28",
 			"date": "2020-03-28",
 			"links": {
-				"src": "https://drive.google.com/file/d/1C3A_TZMr8hO9LFe5jbr3fpnfd3zArZdq/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1C3A_TZMr8hO9LFe5jbr3fpnfd3zArZdq"
 			}
 		},
 		{
 			"title": "2020-06-28",
 			"date": "2020-06-28",
 			"links": {
-				"src": "https://drive.google.com/file/d/1CAqveHLmzpHQEbsS3fMh7_eAw0pCKVf9/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1CAqveHLmzpHQEbsS3fMh7_eAw0pCKVf9"
 			}
 		},
 		{
 			"title": "2020-09-26",
 			"date": "2020-09-26",
 			"links": {
-				"src": "https://drive.google.com/file/d/1Ccmpx4b1E8l-B70W8Eak8-STUmfN5E_e/view?usp=drivesdk"
+				"src": "https://drive.google.com/uc?export=download&id=1Ccmpx4b1E8l-B70W8Eak8-STUmfN5E_e"
 			}
 		},
 		{
 			"title": "YouTube Live「RED LINE」",
 			"date": "2021-05-19",
 			"links": {
-				"src": "https://drive.google.com/file/d/1JXrZRpLfeWU_rbndqRU9yY-BY7NeQ2kR/view?usp=sharing",
-				"img": "tracks/livestreams/YouTube Live「RED LINE」Songs List.jpg"
+				"src": "https://drive.google.com/uc?export=download&id=1JXrZRpLfeWU_rbndqRU9yY-BY7NeQ2kR",
+				"img": "img/livestreams/YouTube Live「RED LINE」Songs List.jpg"
 			}
 		},
 	],
@@ -1442,7 +1442,7 @@ let data = {
 			"title": "Crying for Rain",
 			"version": "(acoustic guitar – video)",
 			"links": {
-				"src": "tracks/others/Crying for Rain (acoustic guitar – video).mp4",
+				"src": "https://drive.google.com/uc?export=download&id=1qiK3u-SLlJoCLrGoNX11x456fRh1Fye4",
 				"source": "https://twitter.com/373STAFF/status/1100363525967343616"
 			}
 		},
@@ -1450,7 +1450,7 @@ let data = {
 			"title": "main actor",
 			"version": "(acoustic guitar – video)",
 			"links": {
-				"src": "tracks/others/main actor (acoustic guitar – video).mp4",
+				"src": "https://drive.google.com/uc?export=download&id=1lbtyqX3sDG3UT3uYmZfgXTkuxfNcvcy7",
 				"source": "https://twitter.com/373STAFF/status/1090568885407862784"
 			}
 		},
@@ -1458,7 +1458,7 @@ let data = {
 			"title": "Prologue",
 			"version": "(acoustic guitar – video)",
 			"links": {
-				"src": "tracks/others/Prologue (acoustic guitar – video).mp4",
+				"src": "https://drive.google.com/uc?export=download&id=18a8OPGisT_jQLoilvEzVhXpRfggf_Ibb",
 				"source": "https://twitter.com/373STAFF/status/1121039653912453120"
 			}
 		},
@@ -1466,7 +1466,7 @@ let data = {
 			"title": "Waiting for Rain",
 			"version": "(acoustic guitar – video)",
 			"links": {
-				"src": "tracks/others/Waiting for Rain (acoustic guitar – video).mp4",
+				"src": "https://drive.google.com/uc?export=download&id=1qwmFuqbBQ7btU-6PjIKRibV6_5BGcGxS",
 				"source": "https://twitter.com/373STAFF/status/1169233552564637696"
 			}
 		},
@@ -1474,42 +1474,42 @@ let data = {
 			"title": "main actor",
 			"version": "(acoustic guitar)",
 			"links": {
-				"src": "tracks/others/main actor (acoustic guitar).mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1eiQsHYnDYg1Ii5gFPnytzCqW5GIMivlq"
 			}
 		},
 		{
 			"title": "Prologue",
 			"version": "(acoustic guitar)",
 			"links": {
-				"src": "tracks/others/Prologue (acoustic guitar).mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1IAtr0bs8HnV15WGKjUCitmRoMS-ew0zj"
 			}
 		},
 		{
 			"title": "Waiting for Rain",
 			"version": "(acoustic guitar)",
 			"links": {
-				"src": "tracks/others/Waiting for Rain (acoustic guitar).mp3"
+				"src": "https://drive.google.com/uc?export=download&id=1KITYHXewRIyG4vmhN-HXeEN5Ip7LG6tY"
 			}
 		},
 		{
 			"title": "Prologue",
 			"version": "(flac)",
 			"links": {
-				"src": "tracks/others/Prologue (flac).flac"
+				"src": "https://drive.google.com/uc?export=download&id=1IozcMyDXdcRuvCBMrC0xULR2AX7S90z0"
 			}
 		},
 		{
 			"title": "main actor",
 			"version": "(flac)",
 			"links": {
-				"src": "tracks/others/main actor (flac).flac"
+				"src": "https://drive.google.com/uc?export=download&id=1D4eg-dzVDc7MOhI4OXsF4Lr3ujORzfU4"
 			}
 		},
 		{
 			"title": "I Love You",
 			"version": "(wav)",
 			"links": {
-				"src": "tracks/others/I Love You.wav"
+				"src": "https://drive.google.com/uc?export=download&id=1NnKd4mUp54EDTNtSHlfdJTQbtpdxGkSD"
 			}
 		}
 	]

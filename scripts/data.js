@@ -1556,7 +1556,7 @@ let data = {
 		},
 		{
 			"title": "",
-			"version": "新曲 (RED LINE YouTube Live)",
+			"version": "(新曲 – RED LINE YouTube Live)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=12zUoz15zzeq03PQFx2y1SO9qScSOX7ot"
 			}

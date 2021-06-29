@@ -1528,35 +1528,35 @@ let data = {
 		},
 		{
 			"title": "Crying for Rain",
-			"version": "(RED LINE YouTube Live)",
+			"version": "(YouTube Live「RED LINE」)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=1oCcMKMZ1A7AW0ML4IeYI5BXnPfQDklfb"
 			}
 		},
 		{
 			"title": "main actor",
-			"version": "(RED LINE YouTube Live)",
+			"version": "(YouTube Live「RED LINE」)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=15qgaGhCjmAvaMgoaPEHqojMnuwpozqaJ"
 			}
 		},
 		{
 			"title": "Waiting for Rain",
-			"version": "(RED LINE YouTube Live)",
+			"version": "(YouTube Live「RED LINE」)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=1SSDgGeH-ntLng8NiG-wbKMSTST06LCe_"
 			}
 		},
 		{
 			"title": "Prologue",
-			"version": "(RED LINE YouTube Live)",
+			"version": "(YouTube Live「RED LINE」)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=1Ij23zqvMUXIV6vceCGX-6Dt-gj9W3nqV"
 			}
 		},
 		{
 			"title": "",
-			"version": "(新曲 – RED LINE YouTube Live)",
+			"version": "(新曲 – YouTube Live「RED LINE」)",
 			"links": {
 				"src": "https://drive.google.com/uc?export=download&id=12zUoz15zzeq03PQFx2y1SO9qScSOX7ot"
 			}

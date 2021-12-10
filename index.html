@@ -31,7 +31,10 @@
 		<link rel="stylesheet" href="/styles/index.css">
 	</head>
 	<body>
-		<img class="bg-image" src="/img/000.png">
+		<picture>
+			<source media="(max-width: 576px)" srcset="/img/005.jpg">
+			<img class="bg-image" src="/img/000.png" alt="background">
+		</picture>
 		
 		<header>
 			<h1 class="m-0 text-center">
@@ -42,7 +45,7 @@
 		
 		<main class="container my-0 p-0">
 			<div class="categories-container row m-0">
-				<div class="col-6 d-flex justify-content-end p-3">
+				<div class="col-12 col-sm-6 d-flex justify-content-end p-3">
 					<div
 						class="card category-card"
 						style="background-image: url(/img/001.png);"
@@ -54,7 +57,7 @@
 					</div>
 				</div>
 				
-				<div class="col-6 d-flex justify-content-start p-3">
+				<div class="col-12 col-sm-6 d-flex justify-content-start p-3">
 					<div
 						class="card category-card"
 						style="background-image: url(/img/004.png);"
@@ -66,7 +69,7 @@
 					</div>
 				</div>
 				
-				<div class="col-6 d-flex justify-content-end p-3">
+				<div class="col-12 col-sm-6 d-flex justify-content-end p-3">
 					<div
 						class="card category-card"
 						style="background-image: url(/img/002.png);"
@@ -78,7 +81,7 @@
 					</div>
 				</div>
 				
-				<div class="col-6 d-flex justify-content-start p-3">
+				<div class="col-12 col-sm-6 d-flex justify-content-start p-3">
 					<div
 						class="card category-card"
 						style="background-image: url(/img/003.jpg);"

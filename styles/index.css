@@ -102,14 +102,30 @@ footer {
 }
 footer > div:first-child {
 	padding: 15px;
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 }
 footer > div:last-child {
 	background-color: #0f0f0f;
 	padding: 5px;
 	padding-bottom: 3px;
-	font-size: 0.85rem;
+	font-size: 0.8rem;
 }
 footer h4 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	footer > div:first-child {
+		font-size: 0.7rem;
+	}
+	footer > div:last-child {
+		font-size: 0.65rem;
+	}
+	footer h4 {
+		font-size: 1rem;
+	}
 }

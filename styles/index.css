@@ -119,6 +119,9 @@ footer h4 {
 	h1 {
 		font-size: 2.5rem;
 	}
+	.info {
+		width: 80vw;
+	}
 	footer > div:first-child {
 		font-size: 0.7rem;
 	}

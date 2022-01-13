@@ -303,6 +303,21 @@ switch (param) {
 			player.origTracks.push(track);
 		}
 		break;
+	case "livestreams":
+		for (let t of data.livestreams) {
+			let l = `Not playing? Download <a href="${t.links.src}" target="_blank">here</a>.`;
+			
+			let title = t.title;
+			let info = new Date(t.date).toLocaleDateString("en-US", {
+				weekday: "long", year: "numeric", month: "long", day: "numeric"
+			});
+			let lyrics = {"romaji": l, "english": l};
+			let src = t.links.src;
+			let track = new Track(title, info, lyrics, src);
+			player.tracks.push(track);
+			player.origTracks.push(track);
+		}
+		break;
 	default:
 		let tl = s("#tracklist");
 		tl.style.padding = "20px 35px";

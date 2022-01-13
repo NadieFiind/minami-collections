@@ -1368,7 +1368,7 @@ let data = {
 			}
 		}
 	],
-	"live_streams": [
+	"livestreams": [
 		{
 			"title": "2018-12-28",
 			"date": "2018-12-28",

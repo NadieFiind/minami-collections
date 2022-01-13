@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Readex+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .x {
 	border: 1px solid red;
@@ -90,25 +91,29 @@ h1 > span:last-child {
 
 .info {
 	width: 60vw;
-	margin: calc(100px - 16px) auto 100px auto;
+	margin: calc(150px - 16px) auto 150px auto;
 	background-color: #050505cc;
 	padding: 30px;
-	font-size: 0.95rem;
+	font-family: "Open Sans";
 }
 
 footer {
-	background-color: #0505057F;
+	background-color: #050505DD;
 	margin-top: 100px;
 }
 footer > div:first-child {
 	padding: 15px;
-	font-size: 0.85rem;
+	font-size: 0.9rem;
+}
+footer > div:first-child p {
+	font-family: "Open Sans";
 }
 footer > div:last-child {
 	background-color: #0f0f0f;
 	padding: 5px;
 	padding-bottom: 3px;
 	font-size: 0.8rem;
+	font-family: "Open Sans";
 }
 footer h4 {
 	font-size: 1.2rem;

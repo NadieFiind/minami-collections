@@ -305,7 +305,7 @@ switch (param) {
 		break;
 	case "livestreams":
 		for (let t of data.livestreams) {
-			let l = `Not playing? Download <a href="${t.links.src}" target="_blank">here</a>.`;
+			let l = `Lyrics not available.<br>Not playing? Download <a href="${t.links.src}" target="_blank">here</a>.`;
 			
 			let title = t.title;
 			let info = new Date(t.date).toLocaleDateString("en-US", {

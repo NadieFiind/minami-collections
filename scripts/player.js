@@ -172,6 +172,8 @@ class Player {
 			addChildren(content, [title, info, gif]);
 			addChildren(s("#tracklist"), [content]);
 		}
+		
+		$(".content a").click((event) => event.stopPropagation());
 	}
 }
 
@@ -310,73 +312,83 @@ function resizeSections() {
 }
 
 
-let player = new Player();
 window.onload = resizeSections;
 window.onresize = resizeSections;
 
 
-$.when(
-	$.ajax({url: "/data/discography.json", dataType: "json"}),
-	$.ajax({url: "/data/covers.json", dataType: "json"}),
-	$.ajax({url: "/data/livestreams.json", dataType: "json"}),
-	$.ajax({url: "/data/others.json", dataType: "json"})
-).then((discography, covers, livestreams, others) => {
-	// load tracks of the given query
-	let urlParams = new URLSearchParams(window.location.search);
-	let param = urlParams.get("s");
-	
-	switch (param) {
-		case "discography":
-			function getLyrics(title, language) {
-				let res = $.ajax({
-					type: "GET",
-					url: `/data/lyrics/${language}/${title}.txt`,
-					async: false
-				});
-				if (res.status === 404) return null;
-				return res.responseText;
+// load tracks of the given query
+let urlParams = new URLSearchParams(window.location.search);
+let param = urlParams.get("s");
+let player = new Player();
+
+switch (param) {
+	case "discography":
+		$.ajax({
+			url: "/data/discography.json",
+			dataType: "json",
+			success: (discography) => {
+				for (let t of discography) {
+					let title = t.titles[0];
+					let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
+					info += ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+					let src = t.links.src;
+					player.addTrack(new Track(title, info, src));
+				}
+				player.render();
 			}
-			
-			for (let t of discography[0]) {
-				let title = t.titles[0];
-				let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
-				let src = t.links.src;
-				player.addTrack(new Track(title, info, src));
+		});
+		break;
+	case "covers":
+		$.ajax({
+			url: "/data/covers.json",
+			dataType: "json",
+			success: (covers) => {
+				for (let t of covers) {
+					let title = t.title;
+					let info = t.artist + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+					let src = t.links.src;
+					player.addTrack(new Track(title, info, src));
+				}
+				player.render();
 			}
-			
-			break;
-		case "covers":
-			for (let t of covers[0]) {
-				let title = t.title;
-				let info = t.artist + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let src = t.links.src;
-				player.addTrack(new Track(title, info, src));
+		});
+		break;
+	case "livestreams":
+		$.ajax({
+			url: "/data/livestreams.json",
+			dataType: "json",
+			success: (livestreams) => {
+				for (let t of livestreams) {
+					let title = t.title;
+					let info = new Date(t.info).toLocaleDateString("en-US", {
+						weekday: "long", year: "numeric", month: "long", day: "numeric"
+					}) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+					let src = t.links.src;
+					
+					player.addTrack(new Track(title, info, src));
+				}
+				player.render();
 			}
-			break;
-		case "livestreams":
-			for (let t of livestreams[0]) {
-				let title = t.title;
-				let info = new Date(t.info).toLocaleDateString("en-US", {
-					weekday: "long", year: "numeric", month: "long", day: "numeric"
-				}) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let src = t.links.src;
-				
-				player.addTrack(new Track(title, info, src));
+		});
+		break;
+	case "others":
+		$.ajax({
+			url: "/data/others.json",
+			dataType: "json",
+			success: (others) => {
+				for (let t of others) {
+					let title = t.title;
+					let info = t.info.substring(1, t.info.length - 1) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+					let src = t.links.src;
+					player.addTrack(new Track(title, info, src));
+				}
+				player.render();
 			}
-			break;
-		case "others":
-			for (let t of others[0]) {
-				let title = t.title;
-				let info = t.info.substring(1, t.info.length - 1) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let src = t.links.src;
-				player.addTrack(new Track(title, info, src));
-			}
-			break;
-		default:
-			let tl = s("#tracklist");
-			tl.style.padding = "20px 35px";
-			tl.textContent = "Not available.";
-	}
-	
-	player.render();
-});
+		});
+		break;
+	default:
+		let tl = s("#tracklist");
+		tl.style.padding = "20px 35px";
+		tl.textContent = "Not available.";
+		player.render();
+}

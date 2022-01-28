@@ -36,6 +36,14 @@ div::-webkit-scrollbar-thumb:hover {
 	box-shadow: none;
 	color: white;
 }
+.link {
+	text-decoration: none;
+	color: #00FFFF;
+}
+.link:hover {
+	text-decoration: none;
+	color: #99FFFF;
+}
 
 #select-sec-container {
 	height: 30px;

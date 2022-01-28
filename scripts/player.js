@@ -1,20 +1,21 @@
 class Player {
 	constructor() {
 		this.audio = s("audio");
-		this.setupAudio();
+		this.#setupAudio();
 		
 		this.tracks = [];
-		this.origTracks = [];
+		this.origTracks = [];  // the unshuffled queue
 		this.currentTrack = null;
 		
 		this.stopped = true;
 		this.shuffle = false;
 		this.repeat = false;
 	}
-	setupAudio() {
+	
+	#setupAudio() {
 		function colon(number) {
 			let num = number + "";
-			return num.replace(/(.{2})$/,':$1');
+			return num.replace(/(.{2})$/, ":$1");
 		}
 		function pad(num, size) {
 			let s = num + "";
@@ -52,6 +53,13 @@ class Player {
 			}
 		};
 	}
+	
+	addTrack(track) {
+		track.player = this;
+		this.tracks.push(track);
+		this.origTracks.push(track);
+	}
+	
 	play() {
 		if (s("#play-btn").classList.contains("playing")) {
 			this.currentTrack.pause(); 
@@ -63,6 +71,7 @@ class Player {
 			}
 		}
 	}
+	
 	prev() {
 		if (this.audio.currentTime < 5) {
 			let index = this.tracks.indexOf(this.currentTrack) - 1;
@@ -78,6 +87,7 @@ class Player {
 			this.audio.currentTime = 0;
 		}
 	}
+	
 	next() {
 		let index = this.tracks.indexOf(this.currentTrack) + 1;
 		
@@ -94,6 +104,7 @@ class Player {
 			this.tracks[index].play();
 		}
 	}
+	
 	stop() {
 		for (let track of this.tracks) {
 			track.prevTrack = null;
@@ -110,6 +121,7 @@ class Player {
 		
 		s("#lyrics").innerHTML = "";
 	}
+	
 	toggleShuffle() {
 		function shuffleArray(array) {
 			let currentIndex = array.length, temporaryValue, randomIndex;
@@ -132,10 +144,12 @@ class Player {
 			this.tracks = [...this.origTracks];
 		}
 	}
+	
 	toggleRepeat() {
 		this.repeat = !this.repeat;
 		s("#rept-btn").classList.toggle("btn-on");
 	}
+	
 	render() {
 		for (let track of this.tracks) {
 			let content = e("button");
@@ -147,7 +161,7 @@ class Player {
 			title.textContent = track.title;
 			
 			let info = e("span");
-			info.textContent = track.info;
+			info.innerHTML = track.info;
 			
 			let gif = e("img");
 			gif.classList.add("playing-gif");
@@ -160,8 +174,10 @@ class Player {
 		}
 	}
 }
+
 class Track {
 	constructor(title, info, lyrics, src) {
+		this.player;
 		this.title = title;
 		this.info = info;
 		this.lyrics = lyrics;
@@ -171,7 +187,7 @@ class Track {
 		this.gif = null;
 	}
 	play(keepSRC) {
-		for (let track of player.tracks) {
+		for (let track of this.player.tracks) {
 			track.element.classList.remove("selected");
 			track.gif.classList.remove("selected");
 		}
@@ -179,21 +195,21 @@ class Track {
 		this.gif.classList.add("selected");
 		
 		if (!keepSRC) {
-			player.audio.src = this.src;
+			this.player.audio.src = this.src;
 		}
-		player.audio.play();
+		this.player.audio.play();
 		
 		s("#play-btn").classList.add("playing");
 		
-		player.stopped = false;
-		player.currentTrack = this;
+		this.player.stopped = false;
+		this.player.currentTrack = this;
 		
 		this.showLyrics();
 	}
 	pause() {
 		this.gif.classList.remove("selected");
 		s("#play-btn").classList.remove("playing");
-		player.audio.pause();
+		this.player.audio.pause();
 	}
 	showLyrics() {
 		let lyricsContainer = s("#lyrics");
@@ -220,7 +236,7 @@ class Track {
 		
 		if (this.lyrics === "none") {
 			title.textContent = this.title;
-			info.textContent = this.info;
+			info.innerHTML = this.info;
 			lyrics.textContent = "Lyrics not available.";
 		} else if (this.lyrics) {
 			title.textContent = this.title;
@@ -240,7 +256,9 @@ class Track {
 	}
 }
 
+
 function selectSection(button, section) {
+	// Switch between the tracklist or lyrics.
 	for (let button of s(".select-sec-btn", true)) {
 		button.classList.remove("selected");
 	}
@@ -250,7 +268,9 @@ function selectSection(button, section) {
 	button.classList.toggle("selected");
 	s(section).classList.toggle("selected");
 }
+
 function resizeSections() {
+	// Responsive Design
 	let sscH = s("#select-sec-container").offsetHeight;
 	let ctrlH = s("#controls").offsetHeight;
 	
@@ -265,65 +285,84 @@ function resizeSections() {
 	s("#volume-panel").style.bottom = ctrlH - 5 + "px";
 }
 
-// load tracks of the given query
-let urlParams = new URLSearchParams(window.location.search);
-let param = urlParams.get("s");
-let player = new Player();
-switch (param) {
-	case "discography":
-		for (let t of data.discography) {
-			let title = t.titles[0];
-			let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
-			let lyrics = t.lyrics;
-			let src = t.links.src;
-			let track = new Track(title, info, lyrics, src);
-			player.tracks.push(track);
-			player.origTracks.push(track);
-		}
-		break;
-	case "covers":
-		for (let t of data.covers) {
-			let title = t.title;
-			let info = t.artist;
-			let lyrics = "none";
-			let src = t.links.src;
-			let track = new Track(title, info, lyrics, src);
-			player.tracks.push(track);
-			player.origTracks.push(track);
-		}
-		break;
-	case "others":
-		for (let t of data.others) {
-			let title = t.title;
-			let info = t.version.substring(1, t.version.length - 1);
-			let lyrics = "none";
-			let src = t.links.src;
-			let track = new Track(title, info, lyrics, src);
-			player.tracks.push(track);
-			player.origTracks.push(track);
-		}
-		break;
-	case "livestreams":
-		for (let t of data.livestreams) {
-			let l = `Lyrics not available.<br>Not playing? Download <a href="${t.links.src}" target="_blank">here</a>.`;
-			
-			let title = t.title;
-			let info = new Date(t.date).toLocaleDateString("en-US", {
-				weekday: "long", year: "numeric", month: "long", day: "numeric"
-			});
-			let lyrics = {"romaji": l, "english": l};
-			let src = t.links.src;
-			let track = new Track(title, info, lyrics, src);
-			player.tracks.push(track);
-			player.origTracks.push(track);
-		}
-		break;
-	default:
-		let tl = s("#tracklist");
-		tl.style.padding = "20px 35px";
-		tl.textContent = "Not available.";
-}
-player.render();
 
+let player = new Player();
 window.onload = resizeSections;
 window.onresize = resizeSections;
+
+
+$.when(
+	$.ajax({url: "/data/discography.json", dataType: "json"}),
+	$.ajax({url: "/data/covers.json", dataType: "json"}),
+	$.ajax({url: "/data/livestreams.json", dataType: "json"}),
+	$.ajax({url: "/data/others.json", dataType: "json"})
+).then((discography, covers, livestreams, others) => {
+	// load tracks of the given query
+	let urlParams = new URLSearchParams(window.location.search);
+	let param = urlParams.get("s");
+	
+	switch (param) {
+		case "discography":
+			function getLyrics(title, language) {
+				let res = $.ajax({
+					type: "GET",
+					url: `/data/lyrics/${language}/${title}.txt`,
+					async: false
+				});
+				if (res.status === 404) return null;
+				return res.responseText;
+			}
+			
+			for (let t of discography[0]) {
+				let title = t.titles[0];
+				let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
+				
+				let lyrics;
+				let romajiLyrics = getLyrics(t.titles[0], "romaji");
+				let englishLyrics = getLyrics(t.titles[0], "english");
+				if (!romajiLyrics || !englishLyrics) lyrics = "none";
+				else lyrics = {romaji: romajiLyrics, english: englishLyrics};
+				
+				let src = t.links.src;
+				player.addTrack(new Track(title, info, lyrics, src));
+			}
+			
+			break;
+		case "covers":
+			for (let t of covers[0]) {
+				let title = t.title;
+				let info = t.artist + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+				let lyrics = "none";
+				let src = t.links.src;
+				player.addTrack(new Track(title, info, lyrics, src));
+			}
+			break;
+		case "livestreams":
+			for (let t of livestreams[0]) {
+				let title = t.title;
+				let info = new Date(t.info).toLocaleDateString("en-US", {
+					weekday: "long", year: "numeric", month: "long", day: "numeric"
+				}) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+				let lyrics = "none";
+				let src = t.links.src;
+				
+				player.addTrack(new Track(title, info, lyrics, src));
+			}
+			break;
+		case "others":
+			for (let t of others[0]) {
+				let title = t.title;
+				let info = t.info.substring(1, t.info.length - 1) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
+				let lyrics = "none";
+				let src = t.links.src;
+				player.addTrack(new Track(title, info, lyrics, src));
+			}
+			break;
+		default:
+			let tl = s("#tracklist");
+			tl.style.padding = "20px 35px";
+			tl.textContent = "Not available.";
+	}
+	
+	player.render();
+});

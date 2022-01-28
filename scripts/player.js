@@ -176,17 +176,41 @@ class Player {
 }
 
 class Track {
-	constructor(title, info, lyrics, src) {
+	constructor(title, info, src) {
 		this.player;
 		this.title = title;
 		this.info = info;
-		this.lyrics = lyrics;
+		this.lyrics = "none";
 		this.romajiLyrics = true;
 		this.src = src;
 		this.element = null;
 		this.gif = null;
+		
+		this._lyricsInitialized = false;
 	}
 	play(keepSRC) {
+		// Set lyrics
+		if (!this._lyricsInitialized) {
+			function getLyrics(title, language) {
+				let res = $.ajax({
+					type: "GET",
+					url: `/data/lyrics/${language}/${title}.txt`,
+					async: false
+				});
+				if (res.status === 404) return null;
+				return res.responseText;
+			}
+			
+			let romajiLyrics = getLyrics(this.title, "romaji");
+			let englishLyrics = getLyrics(this.title, "english");
+			if (!romajiLyrics || !englishLyrics) this.lyrics = "none";
+			else this.lyrics = {romaji: romajiLyrics, english: englishLyrics};
+			
+			this._lyricsInitialized = true;
+		}
+		
+		
+		
 		for (let track of this.player.tracks) {
 			track.element.classList.remove("selected");
 			track.gif.classList.remove("selected");
@@ -316,15 +340,8 @@ $.when(
 			for (let t of discography[0]) {
 				let title = t.titles[0];
 				let info = t.album === "Unknown" ? "Minami" : "Minami – " + t.album;
-				
-				let lyrics;
-				let romajiLyrics = getLyrics(t.titles[0], "romaji");
-				let englishLyrics = getLyrics(t.titles[0], "english");
-				if (!romajiLyrics || !englishLyrics) lyrics = "none";
-				else lyrics = {romaji: romajiLyrics, english: englishLyrics};
-				
 				let src = t.links.src;
-				player.addTrack(new Track(title, info, lyrics, src));
+				player.addTrack(new Track(title, info, src));
 			}
 			
 			break;
@@ -332,9 +349,8 @@ $.when(
 			for (let t of covers[0]) {
 				let title = t.title;
 				let info = t.artist + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let lyrics = "none";
 				let src = t.links.src;
-				player.addTrack(new Track(title, info, lyrics, src));
+				player.addTrack(new Track(title, info, src));
 			}
 			break;
 		case "livestreams":
@@ -343,19 +359,17 @@ $.when(
 				let info = new Date(t.info).toLocaleDateString("en-US", {
 					weekday: "long", year: "numeric", month: "long", day: "numeric"
 				}) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let lyrics = "none";
 				let src = t.links.src;
 				
-				player.addTrack(new Track(title, info, lyrics, src));
+				player.addTrack(new Track(title, info, src));
 			}
 			break;
 		case "others":
 			for (let t of others[0]) {
 				let title = t.title;
 				let info = t.info.substring(1, t.info.length - 1) + ` | <a class="link" href="${t.links.src}" target="_blank">Download</a>`;
-				let lyrics = "none";
 				let src = t.links.src;
-				player.addTrack(new Track(title, info, lyrics, src));
+				player.addTrack(new Track(title, info, src));
 			}
 			break;
 		default:
